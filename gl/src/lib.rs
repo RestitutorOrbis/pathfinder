@@ -869,7 +869,7 @@ impl Drop for GLShader {
 }
 
 pub struct GLTexture {
-    gl_texture: GLuint,
+    pub gl_texture: GLuint,
     pub size: Vector2I,
     pub format: TextureFormat,
 }
