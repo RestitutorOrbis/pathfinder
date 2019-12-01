@@ -652,6 +652,15 @@ impl GLDevice {
         }
     }
 
+    pub fn create_texture_from_existing_texture(&self, texture_id: GLuint,format: TextureFormat, size: Vector2I) -> GLTexture {
+        let mut texture = GLTexture { gl_texture: texture_id, size, format };
+        unsafe {
+            self.bind_texture(&texture, 0);
+        }
+        self.set_texture_parameters(&texture);
+        texture
+    }
+
     fn bind_texture(&self, texture: &GLTexture, unit: u32) {
         unsafe {
             gl::ActiveTexture(gl::TEXTURE0 + unit); ck();
