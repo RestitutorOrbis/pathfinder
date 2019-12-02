@@ -179,7 +179,7 @@ version = "0.1.0"
 dependencies = [
  "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "gl 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "pathfinder_canvas 0.1.0",
  "pathfinder_content 0.1.0",
@@ -334,6 +334,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "cocoa"
+version = "0.19.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "bitflags 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "core-foundation 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "core-graphics 0.17.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.65 (registry+https://github.com/rust-lang/crates.io-index)",
+ "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "color-backtrace"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -383,8 +397,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "core-foundation"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "core-foundation-sys 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.65 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "core-foundation-sys"
 version = "0.6.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "core-foundation-sys"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -516,7 +544,7 @@ dependencies = [
  "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "gl 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "jemallocator 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)",
- "metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "nfd 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "pathfinder_demo 0.1.0",
  "pathfinder_geometry 0.3.0",
@@ -1245,19 +1273,16 @@ dependencies = [
 
 [[package]]
 name = "metal"
-version = "0.14.0"
+version = "0.17.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "bitflags 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "cocoa 0.18.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cocoa 0.19.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "core-graphics 0.17.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.65 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "objc-foundation 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "objc_id 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1379,29 +1404,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "objc-foundation"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "objc_id 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
 name = "objc_exception"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "gcc 0.3.55 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "objc_id"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1496,7 +1503,7 @@ dependencies = [
  "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "gl 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.65 (registry+https://github.com/rust-lang/crates.io-index)",
- "metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "pathfinder_canvas 0.1.0",
  "pathfinder_content 0.1.0",
  "pathfinder_geometry 0.3.0",
@@ -1539,7 +1546,7 @@ dependencies = [
  "gl 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "image 0.21.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "pathfinder_content 0.1.0",
  "pathfinder_export 0.1.0",
  "pathfinder_geometry 0.3.0",
@@ -1631,10 +1638,10 @@ dependencies = [
  "bitflags 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "byteorder 1.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "cocoa 0.18.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "core-foundation 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cocoa 0.19.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "core-foundation 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "foreign-types 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "pathfinder_geometry 0.3.0",
  "pathfinder_gpu 0.1.0",
@@ -2791,12 +2798,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum cloudabi 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ddfc5b9aa5d4507acaf872de71051dfd0e309860e88966e1051e462a077aac4f"
 "checksum cmake 0.1.42 (registry+https://github.com/rust-lang/crates.io-index)" = "81fb25b677f8bf1eb325017cb6bb8452f87969db0fedb4f757b297bee78a7c62"
 "checksum cocoa 0.18.5 (registry+https://github.com/rust-lang/crates.io-index)" = "1706996401131526e36b3b49f0c4d912639ce110996f3ca144d78946727bce54"
+"checksum cocoa 0.19.1 (registry+https://github.com/rust-lang/crates.io-index)" = "f29f7768b2d1be17b96158e3285951d366b40211320fb30826a76cb7a0da6400"
 "checksum color-backtrace 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "90242aff9b6439332beb77ee416126367adcd6376b0dc80b39250e7debdd913d"
 "checksum color_quant 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0dbbb57365263e881e805dc77d94697c9118fd94d8da011240555aa7b23445bd"
 "checksum combine 3.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = "da3da6baa321ec19e1cc41d31bf599f00c783d0517095cdaf0332e3fe8d20680"
 "checksum constant_time_eq 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)" = "995a44c877f9212528ccc74b21a232f66ad69001e40ede5bcee2ac9ef2657120"
 "checksum core-foundation 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)" = "25b9e03f145fd4f2bf705e07b900cd41fc636598fe5dc452fd0db1441c3f496d"
+"checksum core-foundation 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "57d24c7a13c43e870e37c1556b74555437870a04514f7685f5b354e090567171"
 "checksum core-foundation-sys 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e7ca8a5221364ef15ce201e8ed2f609fc312682a8f4e0e3d4aa5879764e0fa3b"
+"checksum core-foundation-sys 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "b3a71ab494c0b5b860bdc8407ae08978052417070c2ced38573a9157ad75b8ac"
 "checksum core-graphics 0.17.3 (registry+https://github.com/rust-lang/crates.io-index)" = "56790968ab1c8a1202a102e6de05fc6e1ec87da99e4e93e9a7d13efbfc1e95a9"
 "checksum core-text 13.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "db84654ad95211c082cf9795f6f83dc17d0ae6c985ac1b906369dc7384ed346d"
 "checksum crc 1.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = "d663548de7f5cca343f1e0a48d14dcfb0e9eb4e079ec58883b7251539fa10aeb"
@@ -2890,7 +2900,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum memchr 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "88579771288728879b57485cc7d6b07d648c9f0141eb955f8ab7f9d45394468e"
 "checksum memmap 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "6585fd95e7bb50d6cc31e20d4cf9afb4e2ba16c5846fc76793f11218da9c475b"
 "checksum memoffset 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "75189eb85871ea5c2e2c15abbdd541185f63b408415e5051f5cac122d8c774b9"
-"checksum metal 0.14.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cd3f21d259068945192293b7a98b1c6844af9eb7602e393c405198b229efc157"
+"checksum metal 0.17.1 (registry+https://github.com/rust-lang/crates.io-index)" = "f83c7dcc2038e12f68493fa3de44235df27b2497178e257185b4b5b5d028a1e4"
 "checksum nfd 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)" = "8e752e3c216bc8a491c5b59fa46da10f1379ae450b19ac688e07f4bb55042e98"
 "checksum nix 0.14.1 (registry+https://github.com/rust-lang/crates.io-index)" = "6c722bee1037d430d0f8e687bbdbf222f27cc6e4e68d5caf630857bb2b6dbdce"
 "checksum nodrop 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)" = "72ef4a56884ca558e5ddb05a1d1e7e1bfd9a68d9ed024c21704cc98872dae1bb"
@@ -2904,9 +2914,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum num-traits 0.2.9 (registry+https://github.com/rust-lang/crates.io-index)" = "443c53b3c3531dfcbfa499d8893944db78474ad7a1d87fa2d94d1a2231693ac6"
 "checksum num_cpus 1.11.1 (registry+https://github.com/rust-lang/crates.io-index)" = "76dac5ed2a876980778b8b85f75a71b6cbf0db0b1232ee12f826bccb00d09d72"
 "checksum objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)" = "915b1b472bc21c53464d6c8461c9d3af805ba1ef837e1cac254428f4a77177b1"
-"checksum objc-foundation 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "1add1b659e36c9607c7aab864a76c7a4c2760cd0cd2e120f3fb8b952c7e22bf9"
 "checksum objc_exception 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "098cd29a2fa3c230d3463ae069cecccc3fdfd64c0d2496ab5b96f82dab6a00dc"
-"checksum objc_id 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "c92d4ddb4bd7b50d730c215ff871754d0da6b2178849f8a2a2ab69712d0c073b"
 "checksum ordered-float 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "18869315e81473c951eb56ad5558bbc56978562d3ecfb87abb7a1e944cea4518"
 "checksum osmesa-sys 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "88cfece6e95d2e717e0872a7f53a8684712ad13822a7979bc760b9c77ec0013b"
 "checksum owning_ref 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "49a4b8ea2179e6a2e27411d3bca09ca6dd630821cf6894c6c7c8467a8ee7ef13"
