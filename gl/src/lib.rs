@@ -22,7 +22,7 @@ use pathfinder_gpu::{ClearOps, DepthFunc, Device, Primitive, RenderOptions, Rend
 use pathfinder_gpu::{ShaderKind, StencilFunc, TextureData, TextureFormat, UniformData};
 use pathfinder_gpu::{VertexAttrClass, VertexAttrDescriptor, VertexAttrType};
 use pathfinder_simd::default::F32x4;
-use std::ffi::CString;
+use std::ffi::{CString, c_void};
 use std::mem;
 use std::ptr;
 use std::str;
@@ -34,6 +34,11 @@ pub struct GLDevice {
 }
 
 impl GLDevice {
+    #[inline]
+    pub fn load_with<F>(loadfn: F) where F: FnMut(&str) -> *const c_void {
+        gl::load_with(loadfn)
+    }
+
     #[inline]
     pub fn new(version: GLVersion, default_framebuffer: GLuint) -> GLDevice {
         GLDevice {
